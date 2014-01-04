@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : clientes.xml
+    Created on : 28 de Dezembro de 2011, 18:44
+    Author     : rafael
+    Description:
+        Purpose of the document follows.
+-->
+<form>
+    <elements>
+        <id>
+            <type>hidden</type>            
+        </id>
+        <titulo>
+            <type>text</type>
+            <options>
+                <label>Nome de sua iniciativa</label>
+                <class>form-control</class>
+                <required>true</required>
+            </options>
+        </titulo>
+        <descricao>
+            <type>textarea</type>
+            <options>
+                <class>form-control</class>
+                <rows>10</rows>
+                <label>Descreva sua iniciativa</label>
+                <required>true</required>
+                <validators>
+                    <notEmpty>
+                        <validator>notEmpty</validator>
+                        <options>
+                            <messages>
+                                <isEmpty>Informe seu nome para o cadastro</isEmpty>
+                            </messages>
+                        </options>
+                    </notEmpty>                    
+                </validators>
+            </options>
+        </descricao>
+        <imagem>
+            <type>file</type>
+            <options>
+                <label>Logotipo </label>
+                <required>true</required>
+            </options>
+        </imagem>
+    </elements>
+</form>

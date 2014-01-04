@@ -1,0 +1,45 @@
+
+<h1>Administração do Pólen</h1>
+
+<nav class="navbar" role="navigation">
+	<a href="/admin/polen/configurar/" class="btn btn-warning navbar-btn ">
+		<i class="glyphicon glyphicon-cog"> Iniciativa</i>
+	</a>
+	<a href="/admin/polen/modulos/" class="btn btn-default navbar-btn">
+		<i class="glyphicon glyphicon-cloud-upload"> Módulos</i>
+	</a>
+</nav>
+
+<?php if($this->configs): ?>
+
+<a href="/admin/polen/configurar-alterar/" class="btn btn-danger btn-sm pull-right" role="button">
+  		Alterar Iniciativa
+  	</a>
+
+<div class="jumbotron">
+	<div id="config_img">
+		<img src="/img/logo-polen.png" alt="...">	
+	</div>	
+	<h1 class="config_titulo"> <?php echo $this->titulo; ?></h1>
+	<div id="config_descricao">
+		<?php echo $this->descricao; ?>
+	</div>
+  	<p></p>
+</div>
+
+<?php else: ?>
+
+<div class="jumbotron">
+	<h1 class="config_titulo">Crie sua iniciativa</h1>
+  	<p><a href="/admin/polen/configurar-criar/" class="btn btn-warning btn-lg" role="button">
+  		Criar
+  	</a></p>
+</div>
+
+<?php endif; ?>
+
+
+<script type="text/javascript">
+
+
+</script>
