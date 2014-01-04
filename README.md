@@ -33,7 +33,7 @@ Configuração Apache
 ```ruby
 <VirtualHost *:80>
     ServerName polenapp.local
-    DocumentRoot /var/www/polen/public/app
+    DocumentRoot /var/www/polen/public
     <Directory /var/www/polen/public>
         DirectoryIndex index.php
         AllowOverride All
