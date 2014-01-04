@@ -3,6 +3,24 @@ Projeto Pólen
 
 É um software livre para criação de iniciativas junto a rede social Coolmeia.
 
+O ambiente base permite ao administrador da iniciativa, configurar visualmente o
+"site", definir qual módulo de mídia utilizará para dissiminar o conteúdo.
+
+As mídias serão módulos que o administrador pode habilitar. A idéia de mídia
+é fornecer um ambiente que permita a rápida dissiminação de textos, posts, imagens, zines
+e videos, num formato customizável.
+
+A autenticação de usuários é feita via webservice com a coolmeia, isso permite que os 
+usuários visitantes interajam com o assunto abordado.
+
+
+Interações futuras
+=====
+
+A idéia de interagir via webservice com o Elgg permite que inicialmente tenhamos 
+a autenticação de usuários e sincronização de avatar, nome etc.. Mas abre a 
+possibilidade de interação com grupos, paginas, blog etc.. da coolmeia.
+
 
 Instalação
 =====
@@ -41,9 +59,11 @@ Roadmap
 =====
 
 - [x] Código base, estrutura em zend framework 1 (php)
+- [ ] Ambiente administrativo
+- [ ] Instalador
 - [ ] Autenticação com a coolmeia
 - [ ] Sincronização de informações do usuário ao logar.
 - [ ] Pesquisa métodos disponíveis do Elgg via webservice
-- [ ] Criação de módulos (blog, grupos)
+- [ ] Criação de módulos (zines, blogs, galeria de imagens)
 
 
