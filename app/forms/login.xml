@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : login.xml
+    Created on : 03 de janeiro de 2014, 18:44
+    Author     : rafael
+    Description:
+        Formulários de usuario
+-->
+<form>
+    <elements>
+        <id>
+            <type>hidden</type>            
+        </id>
+        <email>
+            <type>text</type>
+            <options>
+                <class>form-control</class>
+                <label>Seu E-mail (coolmeia)</label>
+                <required>true</required>
+            </options>
+        </email>
+        <senha>
+            <type>password</type>
+            <options>
+                <class>form-control</class>
+                <label>Senha</label>
+                <required>true</required>
+            </options>
+        </senha>
+    </elements>
+</form>

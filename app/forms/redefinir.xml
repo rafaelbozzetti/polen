@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : redefinir.xml
+    Created on : 03 de janeiro de 2014, 18:44
+    Author     : rafael
+    Description:
+        Formulários de usuario, recuperar senha
+-->
+<form>
+    <elements>
+        <hash>
+            <type>hidden</type>
+            <options>
+                <required>true</required>
+            </options>
+        </hash>
+        <senha>
+            <type>password</type>
+            <options>
+                <label>Nova senha</label>
+                <required>true</required>
+            </options>        
+        </senha>
+        <repete_senha>
+            <type>password</type>
+            <options>
+                <label>Repita sua nova senha</label>
+                <required>true</required>
+            </options>
+        </repete_senha>        
+    </elements>
+</form>

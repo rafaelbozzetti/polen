@@ -1,0 +1,15 @@
+
+.polen-bar {
+	background: transparent url('../img/polen-background.png') top left repeat;
+	border-bottom: 1px solid #ecb701 !important;
+}
+
+.polen-title {
+	font-size: 2em;
+	font-weight: bolder;
+	color: #fff;
+}
+.jumbotron {
+	background-color: #fff4ac !important;
+	border-bottom: 20px solid #fffada;
+}

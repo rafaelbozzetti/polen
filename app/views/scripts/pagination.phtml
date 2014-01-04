@@ -1,0 +1,35 @@
+<div class='view'>
+    <small style="float:right;">
+    <?php echo $this->translate("Mostrando do ").$this->pages->firstItemNumber." ao ".$this->pages->lastItemNumber.$this->translate(" de um total de ").$this->pages->totalItemCount." ".$this->translate(" listados"); ?>
+    </small>
+</div>
+
+<?php if( count( $this->pages->pagesInRange ) > 1 ):?>
+
+<?php $group_url = '' ;?>
+<?php if($this->grupo): ?>
+    <?php $group_url = '/grupo/'.$this->grupo['id']; ?>
+<?php endif ?>
+
+<div class="pagination mt3" id="paginationControl">
+        <?php if( isset($this->pages->previous) ): ?>
+                <a href=<?php echo $this->PAGE_URL ?>page/<?php echo $this->pages->first . $group_url ?>> <?php echo $this->translate("Inicio")?></a>
+        <?php else: ?>
+                <span class="disabled"> <?php echo $this->translate("Inicio")?> </span>
+        <?php endif ?>
+
+        <?php foreach($this->pages->pagesInRange as $item): ?>
+            <?php if( $item != $this->pages->current ): ?>
+                <a href=<?php echo $this->PAGE_URL ?>page/<?php echo $item . $group_url ?>> <?php echo $item ?></a>
+            <?php else: ?>
+                <span class="atual"> <?php echo $item ?> </span>
+            <?php endif ?>
+        <?php endforeach ?>
+
+        <?php if( isset($this->pages->next) ): ?>
+                <a href=<?php echo $this->PAGE_URL ?>page/<?php echo $this->pages->last . $group_url ?>> <?php echo $this->translate('Fim') ?></a>
+        <?php else: ?>
+                <span class="disabled"> <?php echo $this->translate('Fim') ?> </span>
+        <?php endif ?>
+</div>
+<?php endif?>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : clientes.xml
+    Created on : 28 de Dezembro de 2011, 18:44
+    Author     : rafael
+    Description:
+        Purpose of the document follows.
+-->
+<form>
+    <elements>
+        <id>
+            <type>hidden</type>            
+        </id>
+        <email>
+            <type>text</type>
+            <options>
+                <label>E-mail</label>
+                <required>true</required>
+                <description>Utilizado para login no site</description>
+                <validators>
+                    <notEmpty>
+                        <validator>notEmpty</validator>
+                        <options>
+                            <messages>
+                                <isEmpty>Informe seu E-mail para o cadastro</isEmpty>
+                            </messages>
+                        </options>
+                    </notEmpty>                                        
+                    <emailAddress>
+                        <validator>EmailAddress</validator>
+                        <options>
+                            <messages>
+                                <emailAddressInvalid>Informa um E-mail válido</emailAddressInvalid> 
+                                <emailAddressInvalidFormat>Informa um E-mail válido</emailAddressInvalidFormat>
+                                <emailAddressInvalidHostname>Informa um E-mail válido</emailAddressInvalidHostname>
+                                <emailAddressInvalidMxRecord>Informa um E-mail válido</emailAddressInvalidMxRecord> 
+                            </messages>                            
+                        </options>
+                    </emailAddress>
+                </validators>
+            </options>
+        </email>
+        <nome>
+            <type>text</type>
+            <options>
+                <label>Nome</label>
+                <required>true</required>
+                <validators>
+                    <notEmpty>
+                        <validator>notEmpty</validator>
+                        <options>
+                            <messages>
+                                <isEmpty>Informe seu nome para o cadastro</isEmpty>
+                            </messages>
+                        </options>
+                    </notEmpty>                    
+                </validators>
+            </options>
+        </nome>
+        <celular>
+            <type>text</type>
+            <options>
+                <label>Celular</label>
+            </options>
+        </celular>
+        <timezone>
+            <type>select</type>
+            <options>
+                <label>Fuso Horário</label>
+                    <multioptions>
+                        <utc-2>GMT-2 - Fernando de Noronha</utc-2>
+                        <utc-3>GMT-3 - Brasília</utc-3>
+                        <utc-4>GMT-4 - Acre</utc-4>
+                    </multioptions>
+            </options>
+        </timezone>
+        <codigo_area>
+            <type>text</type>
+            <options>
+                <label>Prefixo padrão de sua localidade</label>
+                <description>O prefixo de sua localidade.</description>
+            </options>            
+        </codigo_area>        
+        <senha>
+            <type>password</type>
+            <options>
+                <label>Senha</label>
+                <required>true</required>
+            </options>
+        </senha>
+        <repete_senha>
+            <type>password</type>
+            <options>
+                <label>Repita sua senha</label>
+                <required>true</required>
+            </options>
+        </repete_senha>        
+    </elements>
+</form>

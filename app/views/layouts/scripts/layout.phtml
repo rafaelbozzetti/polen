@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="O UltraSMS é a melhor ferramenta de envio de Mobile Marketing do mercado.">
+    <meta name="author" content="Polén">
+    <meta name="keywords" content="">
+    <title>Pólen</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">        
+    <link rel="stylesheet" href="/dist/css/bootstrap.css" type="text/css" media="screen" />
+     
+      <!--[if lt IE 8]>
+        <div style=' clear: both; text-align:center; position: relative;'>
+          <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100//images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+          </a>
+        </div>
+      <![endif]-->
+      <!--[if lt IE 9]>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+                        <script type="text/javascript" src="js/html5.js"></script>
+                <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+      <![endif]-->
+  </head>
+  <body>
+      <?php 
+        $authUser = (Zend_Auth::getInstance()->hasIdentity() ? true : false) ;
+      ?>  
+    <div class="navbar navbar-inverse navbar-fixed-top polen-bar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="/img/logo-polen.png" />
+        </div>
+        <div class="navbar-collapse collapse">
+        <?php if( ! $authUser ) : ?>
+
+          <form action="/usuarios/" method="post" class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input name="email" type="text" placeholder="E-mail" class="form-control">
+            </div>
+            <div class="form-group">
+              <input name="senha" type="password" placeholder="Senha" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-warning">Entrar</button>
+          </form>
+
+        <?php else : ?>
+
+          <ul class="nav navbar-nav pull-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rafael Bozzetti <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Suas Informações</a></li>
+                <li><a href="/admin/polen/">Administração</a></li>
+                <li class="divider"></li>
+                <li><a href="/usuarios/logoff/"><b>Sair</b></a></li>
+              </ul>
+            </li>
+          </ul>
+
+        <?php endif; ?>
+
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+    <?php if( ! $authUser ) : ?>
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Seja bem-vindo</h1>
+          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <p><a class="btn btn-warning btn-lg" role="button">Learn more &raquo;</a></p>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <div class="container">
+        <?php Zend_Debug::dump($authUser) ; ?>  
+      <?php echo $this->layout()->content; ?>
+
+      <hr>
+
+      <footer>
+        <p><b>Projeto Pólen</b>  polen.coolmeia.org</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>      
+  </body>
+</html>
