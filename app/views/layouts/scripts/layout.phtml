@@ -41,23 +41,33 @@
           <img src="/img/logo-polen.png" />
         </div>
         <div class="navbar-collapse collapse">
+
         <?php if( ! $authUser ) : ?>
 
-
-          <form action="/usuarios/" method="post" class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <img src="/img/logo-coolmeia.png" />
-            </div>
-            <div class="form-group">
-              <input name="email" type="text" placeholder="E-mail" class="form-control">
-            </div>
-            <div class="form-group">
-              <input name="senha" type="password" placeholder="Senha" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-warning">Entrar</button>
-          </form>
+          <ul class="nav navbar-nav pull-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <button type="submit" class="btn btn-warning btn-sm">Entrar</button>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <form action="/usuarios/" method="post" class="navbar-form navbar-right" role="form">
+                  <div class="form-group">
+                    <img src="/img/logo-coolmeia.png" /> Seu login na Coolmeia
+                  </div>
+                  <div class="form-group">
+                    <input name="email" type="text" placeholder="E-mail" class="form-control btn-sm">
+                  </div>
+                  <div class="form-group">
+                    <input name="senha" type="password" placeholder="Senha" class="form-control btn-sm">
+                  </div>
+                  <button type="submit" class="btn btn-warning btn-sm">Entrar</button>
+                </form>
+              </ul>
+            </li>
 
         <?php else : ?>
+
 
           <ul class="nav navbar-nav pull-right">
             <li class="dropdown">
@@ -89,7 +99,7 @@
       </div>
     <?php endif; ?>
 
-    <div class="container">
+    <div class="container" style="padding-top: 50px;">
       <?php echo $this->layout()->content; ?>
 
       <hr>

@@ -10,6 +10,13 @@
 	color: #fff;
 }
 .jumbotron {
-	background-color: #fffead !important;
-	border-bottom: 20px solid #ffef75;
+	text-align:center;
+	background-color: #fff !IMPORTANT;
+}
+
+#config_img, #config_titulo, #config_descricao {
+	display:block;	
+}
+ 
+#config_img:hover, #config_titulo:hover, #config_descricao:hover {
 }
