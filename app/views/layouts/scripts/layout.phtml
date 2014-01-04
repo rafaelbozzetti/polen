@@ -43,7 +43,11 @@
         <div class="navbar-collapse collapse">
         <?php if( ! $authUser ) : ?>
 
+
           <form action="/usuarios/" method="post" class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <img src="/img/logo-coolmeia.png" />
+            </div>
             <div class="form-group">
               <input name="email" type="text" placeholder="E-mail" class="form-control">
             </div>
@@ -78,7 +82,7 @@
     <?php if( ! $authUser ) : ?>
       <div class="jumbotron">
         <div class="container">
-          <h1>Seja bem-vindo</h1>
+          <h2>Seja bem-vindo</h2>
           <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
           <p><a class="btn btn-warning btn-lg" role="button">Learn more &raquo;</a></p>
         </div>
@@ -86,13 +90,12 @@
     <?php endif; ?>
 
     <div class="container">
-        <?php Zend_Debug::dump($authUser) ; ?>  
       <?php echo $this->layout()->content; ?>
 
       <hr>
 
       <footer>
-        <p><b>Projeto Pólen</b>  polen.coolmeia.org</p>
+        <p><b>Projeto Pólen</b></p>
       </footer>
     </div> <!-- /container -->
 
