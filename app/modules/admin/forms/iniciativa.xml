@@ -16,14 +16,14 @@
             <type>text</type>
             <options>
                 <label>Nome de sua iniciativa</label>
-                <class>form-control</class>
+                <class>form-control  input-lg</class>
                 <required>true</required>
             </options>
         </titulo>
         <descricao>
             <type>textarea</type>
             <options>
-                <class>form-control</class>
+                <class>form-control  input-lg</class>
                 <rows>10</rows>
                 <label>Descreva sua iniciativa</label>
                 <required>true</required>
@@ -42,8 +42,11 @@
         <imagem>
             <type>file</type>
             <options>
-                <label>Logotipo </label>
+                <label>Imagem de sua iniciativa ou logomarca</label>
                 <required>true</required>
+                <description>
+                        Selecione uma nova imagem, caso necessário.
+                </description>
             </options>
         </imagem>
     </elements>

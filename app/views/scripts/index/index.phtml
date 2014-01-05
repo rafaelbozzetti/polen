@@ -1,4 +1,28 @@
-      <!-- Example row of columns -->
+<?php if($this->configs): ?>
+
+<div class="jumbotron">
+  <div id="config_img">
+    <img src="/store/<?php echo $this->logo; ?>" alt="..." class="img-rounded"> 
+  </div>  
+  <h1 class="config_titulo"> <?php echo $this->titulo; ?></h1>
+  <div id="config_descricao">
+    <?php echo $this->descricao; ?>
+  </div>
+    <p></p>
+</div>
+
+
+<?php else : ?>
+
+      <div class="jumbotron">
+        <div class="container">
+          <h2>Seja bem-vindo</h2>
+          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <p><a class="btn btn-warning btn-lg" role="button">Learn more &raquo;</a></p>
+        </div>
+      </div>
+
+       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
           <h2>Polinize idéias</h2>
@@ -17,3 +41,6 @@
           <p><a class="btn btn-warning" href="#" role="button">View details &raquo;</a></p>
         </div>
       </div>
+
+<?php endif; ?>
+

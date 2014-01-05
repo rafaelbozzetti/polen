@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+<?php $titulo = Polen_Config::get('titulo'); ?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="O UltraSMS é a melhor ferramenta de envio de Mobile Marketing do mercado.">
+    <meta name="description" content="">
     <meta name="author" content="Polén">
     <meta name="keywords" content="">
-    <title>Pólen</title>
+    <title><?php echo $titulo['value']; ?></title>
 
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">        
     <link rel="stylesheet" href="/dist/css/bootstrap.css" type="text/css" media="screen" />
@@ -38,7 +39,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <img src="/img/logo-polen.png" />
+          <?php if($titulo): ?>
+            <h2 class="txt-titulo"><?php echo $titulo['value']; ?> </h2>
+          <?php else: ?>
+            <img src="/img/logo-polen.png" />
+          <?php endif; ?>
+          
         </div>
         <div class="navbar-collapse collapse">
 
@@ -88,17 +94,6 @@
     </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-
-    <?php if( ! $authUser ) : ?>
-      <div class="jumbotron">
-        <div class="container">
-          <h2>Seja bem-vindo</h2>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-          <p><a class="btn btn-warning btn-lg" role="button">Learn more &raquo;</a></p>
-        </div>
-      </div>
-    <?php endif; ?>
-
     <div class="container" style="padding-top: 50px;">
       <?php echo $this->layout()->content; ?>
 

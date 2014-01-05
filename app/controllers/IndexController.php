@@ -12,8 +12,14 @@ class IndexController extends Zend_Controller_Action
     {
 
 
-                echo 'ss';
-    
+        $configs = Polen_Config::get();
+        $this->view->configs = $configs;
+
+        if($configs){
+            foreach($configs as $config) {
+                $this->view->{$config['chave']} = $config['value'];
+            }            
+        }
     
     }
 }

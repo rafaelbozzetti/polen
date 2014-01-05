@@ -20,3 +20,19 @@
  
 #config_img:hover, #config_titulo:hover, #config_descricao:hover {
 }
+
+label {
+	color: #aeaeae;
+	padding: 10px 0px 10px 0px;
+}
+.required:after {
+    content: " (requerido)";
+    color: #ffef75;
+    font-weight: lighter;
+}
+
+.txt-titulo {
+	margin: 0px;
+	padding: 10px 0px 0px 0px;
+	color: #fff;
+}
